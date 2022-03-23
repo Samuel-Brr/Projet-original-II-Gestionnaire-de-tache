@@ -84,11 +84,18 @@ $theme: mat.define-light-theme($primary, $accent);
 
 @include mat.all-component-themes($theme);
 
+*{
+  box-sizing: border-box;
+}
+
 html, body { height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+  body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
 
   }
 
