@@ -32,17 +32,21 @@
 
     <div class="navlinks-container">
 
-      <a class="nav-link" mat-button routerLink="/">
+      <a class="nav-link" mat-button routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">
         <mat-icon>assignment</mat-icon>
       Gestionnaire
       </a>
 
-      <a class="nav-link" mat-button routerLink="/signup">
+      <a class="nav-link" mat-button routerLink="/signup"
+        routerLinkActive="active">
         <mat-icon>person_add</mat-icon>
           Inscription
       </a>
 
-      <a class="nav-link" mat-button routerLink="/connexion">
+      <a class="nav-link" mat-button routerLink="/connexion"
+        routerLinkActive="active">
         <mat-icon>account_circle</mat-icon>
         Connexion
       </a>
