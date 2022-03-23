@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { Liste } from '../models/liste';
 
 @Injectable({
@@ -6,7 +7,40 @@ import { Liste } from '../models/liste';
 })
 export class ListeDeTachesService {
 
-  listes: Liste[]
+  listes$: Observable<Liste[]>
+  listes: Liste[] =[{
 
-  constructor() { }
+    titre: "toto",
+    taches: [{
+      titre: "okok",
+      contenu: "yolo"
+    }]
+  },
+  {
+
+    titre: "toto",
+    taches: [{
+      titre: "okok",
+      contenu: "yolo"
+    }]
+  },
+  {
+
+    titre: "toto",
+    taches: [{
+      titre: "okok",
+      contenu: "yolo"
+    }]
+  }
+]
+
+  subject = new BehaviorSubject<Liste[]>([])
+
+  constructor() {
+
+    this.listes$ = this.subject.asObservable()
+    this.subject.next(this.listes)
+    console.log("valeur de l'observable du service" ,this.listes$)
+
+   }
 }

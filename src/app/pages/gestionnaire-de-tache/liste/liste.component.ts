@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Observable, tap } from 'rxjs';
+import { Liste } from 'src/app/models/liste';
+import { ListeDeTachesService } from 'src/app/services/liste-de-taches.service';
+import { ListeDialogueComponent } from '../liste-dialogue/liste-dialogue.component';
 
 @Component({
   selector: 'app-liste',
@@ -7,9 +12,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListeComponent implements OnInit {
 
-  constructor() { }
+listes$: Observable<Liste[]>
+
+  constructor(private dialog: MatDialog,
+              private listeDeTaches: ListeDeTachesService) {
+
+                this.listes$ = listeDeTaches.listes$
+                console.log("observable du composant", this.listes$)
+
+              }
 
   ngOnInit(): void {
+
+    this.listes$
+      .pipe(
+        tap(val => console.log("test",val[0].titre))
+      )
+      .subscribe()
+
+  }
+
+  openDialog() {
+    this.dialog.open(ListeDialogueComponent);
   }
 
 }

@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Ajouter une Liste</h1>
+
+<div mat-dialog-content [formGroup]="form">
+  <mat-form-field>
+    <input matInput formControlName="titre" placeholder="Titre de ma liste">
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close>Close</button>
+  <button mat-raised-button color="primary" [disabled]="!form.valid">SAUVEGARDER</button>
+</div>
