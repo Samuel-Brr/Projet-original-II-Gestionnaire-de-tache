@@ -3,8 +3,11 @@
 .carte-gdt {
   display: flex;
 
+  margin: 100px auto;
+
   min-height: 300px;
   min-width: 500px;
+  max-width: 600px;
 
   padding: 0%;
 }
