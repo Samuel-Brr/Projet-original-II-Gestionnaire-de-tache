@@ -14,7 +14,7 @@ $mat-primary: (
         200: #9fa8da,
         300: #7986cb,
         400: #5c6bc0,
-        500: #3f51b5,
+        500: #16A085,
         600: #3949ab,
         700: #303f9f,
         800: #283593,
@@ -47,7 +47,7 @@ $mat-accent: (
         200: #f48fb1,
         300: #f06292,
         400: #ec407a,
-        500: #e91e63,
+        500: #F4D03F,
         600: #d81b60,
         700: #c2185b,
         800: #ad1457,
@@ -88,5 +88,8 @@ html, body { height: 100%;
   display: flex;
   justify-content: center;
   align-items: center; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+
+  }
+
 
