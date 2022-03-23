@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatSliderModule } from '@angular/material/slider';
+import { GestionnaireDeTacheComponent } from './pages/gestionnaire-de-tache/gestionnaire-de-tache.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GestionnaireDeTacheComponent
   ],
   imports: [
     BrowserModule,
