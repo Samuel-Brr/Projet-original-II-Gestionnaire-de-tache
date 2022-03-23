@@ -30,22 +30,69 @@
 
     button{
       width: fit-content;
-
-      mat-icon{
-        margin: auto;
-        font-size: small;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        border: 1px solid black;
-        border-radius: 3px;
-        background-color: white;
-
-        &:hover{
-          background-color: rgba(211, 211, 211, 0.24);
-        }
-      }
     }
+}
+
+mat-icon{
+  margin: auto 2px !important;
+  font-size: small;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid lightgray;
+  border-radius: 3px;
+
+  &:hover{
+    background-color: rgba(211, 211, 211, 0.24);
+    cursor: pointer;
+  }
+}
+
+.tache{
+  display: block;
+
+}
+
+#tache-container{
+  display: flex;
+  background-color: white;
+  border-radius: 3px;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 5px 10px;
+
+  &:hover{
+    -webkit-box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.164);
+    box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.219);
+
+    cursor: pointer;
+  }
+}
+
+.tache-btn{
+  padding: 0%;
+}
+
+.tache-actions{
+
+  display: flex;
+
+}
+
+.delete{
+  background-color: red;
+  color: white;
+
+  &:hover{
+    background-color: white;
+    color: red;
+  }
+}
+
+.normal{
+  font-size: x-large;
 }

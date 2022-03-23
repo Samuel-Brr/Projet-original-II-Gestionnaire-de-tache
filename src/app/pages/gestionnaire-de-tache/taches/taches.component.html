@@ -3,10 +3,16 @@
   <div class="text-container">
     <div class="titre-container">
       <h2>Taches</h2>
-      <button mat-button><mat-icon>settings</mat-icon></button>
+      <mat-icon>settings</mat-icon>
     </div>
-    <a>Une tache</a>
+    <div id="tache-container">
+      <a class="tache">Une tache</a>
+      <div class="tache-actions">
+        <mat-icon>edit</mat-icon>
+        <mat-icon class="delete">delete_forever</mat-icon>
+      </div>
+    </div>
   </div>
-  <button mat-mini-fab><mat-icon>add</mat-icon></button>
+  <button mat-mini-fab><mat-icon class="normal">add</mat-icon></button>
 
 </div>
