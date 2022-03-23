@@ -1,0 +1,16 @@
+<mat-card class="mat-elevation-z7">
+  <h2>Inscription</h2>
+  <div class="form-container" [formGroup]="form">
+
+    <mat-form-field>
+      <input matInput  formControlName="email" placeholder="Email">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput  formControlName="mdp" placeholder="Mot de passe">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" [disabled]="!form.valid">Connexion</button>
+
+  </div>
+</mat-card>

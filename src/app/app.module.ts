@@ -6,18 +6,39 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatSliderModule } from '@angular/material/slider';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+
+
 import { GestionnaireDeTacheComponent } from './pages/gestionnaire-de-tache/gestionnaire-de-tache.component';
+import { ListeComponent } from './pages/gestionnaire-de-tache/liste/liste.component';
+import { TachesComponent } from './pages/gestionnaire-de-tache/taches/taches.component';
+import { SignupComponent } from './pages/signup/signup.component';
+
+import { ReactiveFormsModule } from '@angular/forms';
+import { ConnexionComponent } from './pages/connexion/connexion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GestionnaireDeTacheComponent
+    GestionnaireDeTacheComponent,
+    ListeComponent,
+    TachesComponent,
+    SignupComponent,
+    ConnexionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,
+    MatFormFieldModule,
+    MatCardModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
