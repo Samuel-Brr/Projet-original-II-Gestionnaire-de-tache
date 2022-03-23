@@ -43,4 +43,10 @@ export class ListeDeTachesService {
     console.log("valeur de l'observable du service" ,this.listes$)
 
    }
+
+   sauvegarder(data){
+    this.subject.next(data)
+    this.listes = data
+   }
+
 }

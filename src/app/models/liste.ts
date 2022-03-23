@@ -1,6 +1,11 @@
 import { Tache } from "./tache"
 
-export interface Liste {
+export class Liste {
   titre: string
   taches: Tache[]
+
+  constructor(titre: string, taches: Tache[]){
+    this.titre = titre
+    this.taches = taches
+  }
 }

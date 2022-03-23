@@ -8,5 +8,9 @@
 
 <div mat-dialog-actions>
   <button mat-raised-button mat-dialog-close>Close</button>
-  <button mat-raised-button color="primary" [disabled]="!form.valid">SAUVEGARDER</button>
+  <button mat-raised-button
+          color="primary" [disabled]="!form.valid"
+          mat-dialog-close
+          (click)="onSauvegarder(form)">SAUVEGARDER</button>
 </div>
+
