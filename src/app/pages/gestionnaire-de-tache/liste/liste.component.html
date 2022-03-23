@@ -1,11 +1,11 @@
 <div class="liste-container">
 
   <div class="text-container">
-    <h2 class="liste">Liste</h2>
+    <h2 class="titre-liste">Liste</h2>
     <ng-container *ngIf="(listes$ | async) as listes">
 
-      <a *ngFor="let liste of listes"> {{liste.titre}} </a>
-       <!-- {{listes[0].titre}} -->
+      <a class="liste" *ngFor="let liste of listes"> {{liste.titre}} </a>
+
 
     </ng-container>
 

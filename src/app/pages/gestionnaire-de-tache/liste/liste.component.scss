@@ -9,3 +9,18 @@
 
   padding: 20px;
 }
+
+.liste{
+  display: block;
+
+  font-weight: bold;
+
+  padding: 5px 10px;
+
+}
+
+.liste:hover{
+ cursor: pointer;
+ background-color: #16a08418 ;
+ border-radius: 5px;
+}
