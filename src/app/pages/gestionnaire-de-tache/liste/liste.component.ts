@@ -37,9 +37,10 @@ listes$: Observable<Liste[]>
     this.dialog.open(ListeDialogueComponent);
   }
 
-  displayTaches(taches: Tache[]){
+  displayTaches(taches: Tache[], index){
     this.listeDeTaches.displayTaches(taches)
-    console.log('clicked')
+    this.listeDeTaches.index = index
+    console.log(this.listeDeTaches.index)
   }
 
 }

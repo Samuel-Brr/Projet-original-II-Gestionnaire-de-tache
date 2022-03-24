@@ -40,6 +40,8 @@ export class ListeDeTachesService {
   }
 ]
 
+  index
+
   subject = new BehaviorSubject<Liste[]>([])
   subjectListe = new BehaviorSubject<Tache[]>([])
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Tache } from 'src/app/models/tache';
+import { ListeDeTachesService } from 'src/app/services/liste-de-taches.service';
 
 @Component({
   selector: 'app-add-tache-dialogue',
@@ -12,9 +14,26 @@ export class AddTacheDialogueComponent implements OnInit {
     contenu:["", Validators.required]
   })
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,
+              private listeDeTaches: ListeDeTachesService) { }
 
   ngOnInit(): void {
   }
 
+
+  onSauvegarder(form){
+    let liste = this.listeDeTaches.listes[this.listeDeTaches.index]
+    const tache = new Tache("", form.value.contenu)
+
+    const newListe = {
+      ...liste,
+    }
+
+    newListe.taches.push(tache)
+
+    liste = newListe
+
+    // console.log(form.value.contenu)
+
+  }
 }

@@ -4,7 +4,7 @@
     <h2 class="titre-liste">Liste</h2>
     <ng-container *ngIf="(listes$ | async) as listes">
 
-      <a class="liste" *ngFor="let liste of listes" (click)="displayTaches(liste.taches)"> {{liste.titre}} </a>
+      <a class="liste" *ngFor="let liste of listes, let index = index" (click)="displayTaches(liste.taches, index)">{{index}}{{liste.titre}} </a>
 
 
     </ng-container>
@@ -13,5 +13,6 @@
 
   <button mat-raised-button
           (click)="openDialog()"
-          color="primary">Nouvelle Liste +</button>
+          color="primary">Nouvelle Liste +
+  </button>
 </div>
