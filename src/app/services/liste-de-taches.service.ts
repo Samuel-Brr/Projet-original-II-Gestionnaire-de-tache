@@ -59,12 +59,12 @@ export class ListeDeTachesService {
 
    displayTaches(taches: Tache[] ){
      this.subjectListe.next(taches)
-     let abo =this.liste$
-        .pipe(
-          tap(val => console.log("Abonnement",val))
-        )
-        .subscribe()
-     abo.unsubscribe()
+    //  let abo =this.liste$
+    //     .pipe(
+    //       tap(val => console.log("Abonnement",val))
+    //     )
+    //     .subscribe()
+    //  abo.unsubscribe()
    }
 
 }

@@ -8,10 +8,10 @@
 
     <ng-container *ngIf="(taches$|async) as taches" >
 
-      <div id="tache-container" *ngFor="let tache of taches" >
+      <div id="tache-container" *ngFor="let tache of taches" onclick="this.classList.toggle('test')" >
         <a class="tache"> {{tache.contenu}} </a>
         <div class="tache-actions">
-          <mat-icon>edit</mat-icon>
+          <mat-icon >edit</mat-icon>
           <mat-icon class="delete">delete_forever</mat-icon>
         </div>
       </div>

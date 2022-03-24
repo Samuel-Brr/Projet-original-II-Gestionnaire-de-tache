@@ -22,5 +22,4 @@ export class TachesComponent implements OnInit {
   }
 
 
-
 }
