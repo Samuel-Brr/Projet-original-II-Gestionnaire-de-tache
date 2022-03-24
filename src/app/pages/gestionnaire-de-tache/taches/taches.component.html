@@ -5,13 +5,19 @@
       <h2>Taches</h2>
       <mat-icon>settings</mat-icon>
     </div>
-    <div id="tache-container">
-      <a class="tache">Une tache</a>
-      <div class="tache-actions">
-        <mat-icon>edit</mat-icon>
-        <mat-icon class="delete">delete_forever</mat-icon>
+
+    <ng-container *ngIf="(taches$|async) as taches" >
+
+      <div id="tache-container" *ngFor="let tache of taches" >
+        <a class="tache"> {{tache.contenu}} </a>
+        <div class="tache-actions">
+          <mat-icon>edit</mat-icon>
+          <mat-icon class="delete">delete_forever</mat-icon>
+        </div>
       </div>
-    </div>
+
+    </ng-container>
+
   </div>
   <button mat-mini-fab><mat-icon class="normal">add</mat-icon></button>
 

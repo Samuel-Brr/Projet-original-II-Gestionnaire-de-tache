@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable, Subject, tap } from 'rxjs';
 import { Liste } from '../models/liste';
+import { Tache } from '../models/tache';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,7 @@ import { Liste } from '../models/liste';
 export class ListeDeTachesService {
 
   listes$: Observable<Liste[]>
+  liste$: Observable<Tache[]>
   listes: Liste[] =[{
 
     titre: "toto",
@@ -18,35 +20,51 @@ export class ListeDeTachesService {
   },
   {
 
-    titre: "toto",
+    titre: "tata",
     taches: [{
-      titre: "okok",
-      contenu: "yolo"
+      titre: "blabla",
+      contenu: "blibli"
     }]
   },
   {
 
-    titre: "toto",
+    titre: "titi",
     taches: [{
-      titre: "okok",
-      contenu: "yolo"
-    }]
+      titre: "tictac",
+      contenu: "toctuc"
+    },
+    {
+      titre: "tictac",
+      contenu: "toctuc"
+    },]
   }
 ]
 
   subject = new BehaviorSubject<Liste[]>([])
+  subjectListe = new BehaviorSubject<Tache[]>([])
 
   constructor() {
 
     this.listes$ = this.subject.asObservable()
     this.subject.next(this.listes)
-    console.log("valeur de l'observable du service" ,this.listes$)
+    // console.log("valeur de l'observable du service" ,this.listes$)
+    this.liste$ = this.subjectListe.asObservable()
 
    }
 
    sauvegarder(data){
     this.subject.next(data)
     this.listes = data
+   }
+
+   displayTaches(taches: Tache[] ){
+     this.subjectListe.next(taches)
+     let abo =this.liste$
+        .pipe(
+          tap(val => console.log("Abonnement",val))
+        )
+        .subscribe()
+     abo.unsubscribe()
    }
 
 }
