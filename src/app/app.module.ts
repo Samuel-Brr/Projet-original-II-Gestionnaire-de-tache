@@ -15,6 +15,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 
 
@@ -53,7 +55,8 @@ import { AddTacheDialogueComponent } from './pages/gestionnaire-de-tache/add-tac
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

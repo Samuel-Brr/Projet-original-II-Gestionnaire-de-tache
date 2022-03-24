@@ -1,4 +1,5 @@
 A faire:
 
-Créer taches
+
 edit/delete des listes
+edit/delete tache

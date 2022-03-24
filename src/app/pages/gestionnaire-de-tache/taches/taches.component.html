@@ -3,7 +3,17 @@
   <div class="text-container">
     <div class="titre-container">
       <h2>Taches</h2>
-      <mat-icon>settings</mat-icon>
+      <mat-icon [matMenuTriggerFor]="menu">settings</mat-icon>
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <span>EDIT LISTE</span>
+        </button>
+        <button class="delete" mat-menu-item>
+          <span>DELETE LISTE</span>
+        </button>
+      </mat-menu>
+
     </div>
 
     <ng-container *ngIf="(taches$|async) as taches" >
