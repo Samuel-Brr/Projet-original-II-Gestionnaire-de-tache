@@ -1,6 +1,4 @@
 A faire:
 
 Créer taches
-Affichers les taches en fonction de la liste
-etat de completion d'un tache
 edit/delete des listes
