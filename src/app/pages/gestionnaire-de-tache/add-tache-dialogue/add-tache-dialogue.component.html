@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>Ajouter une Tache</h1>
+
+<div mat-dialog-content [formGroup]="form">
+  <mat-form-field>
+    <input matInput formControlName="contenu"
+    placeholder="Contenu de ma tache">
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close>Close</button>
+  <button mat-raised-button
+          color="primary" [disabled]="!form.valid"
+          mat-dialog-close
+         >SAUVEGARDER</button>
+</div>

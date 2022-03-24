@@ -26,6 +26,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ConnexionComponent } from './pages/connexion/connexion.component';
 import { ListeDialogueComponent } from './pages/gestionnaire-de-tache/liste-dialogue/liste-dialogue.component';
+import { AddTacheDialogueComponent } from './pages/gestionnaire-de-tache/add-tache-dialogue/add-tache-dialogue.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ListeDialogueComponent } from './pages/gestionnaire-de-tache/liste-dial
     SignupComponent,
     ConnexionComponent,
     ListeDialogueComponent,
+    AddTacheDialogueComponent,
   ],
   imports: [
     BrowserModule,
