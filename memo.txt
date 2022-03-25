@@ -3,3 +3,6 @@ A faire:
 
 edit/delete des listes
 edit/delete tache
+
+Bon la je me suis completement perdu dans la services, la communication entre les différents composants,
+ducoup je vais refaire un tuto pour y voir un peu plus clair 
