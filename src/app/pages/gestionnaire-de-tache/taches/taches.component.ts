@@ -28,5 +28,16 @@ export class TachesComponent implements OnInit {
     this.dialog.open(AddTacheDialogueComponent)
   }
 
+  deleteListe(){
 
+   const index = this.listeDeTaches.index
+   let listes = this.listeDeTaches.listes
+   const newListes = [...listes]
+   newListes.splice(index, 1)
+
+   listes = newListes
+   this.listeDeTaches.subject.next(listes)
+
+    console.log("Clicked !", newListes)
+ }
 }
